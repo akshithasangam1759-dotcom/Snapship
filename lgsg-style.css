@@ -1,0 +1,139 @@
+/* Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #5b4bff, #af4eff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Left form */
+.form-section {
+    width: 50%;
+    padding: 40px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.forgot {
+    font-size: 14px;
+    text-decoration: none;
+    color: #6a4bff;
+}
+
+.terms {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.primary {
+    background: linear-gradient(90deg, #5c4bff, #b34efe);
+    color: white;
+    border: none;
+}
+
+.outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.side-section {
+    width: 50%;
+    background: linear-gradient(135deg, #5b4bff, #af4eff);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.side-section h2 {
+    margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social img {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Position the GitHub icon centered exactly below the Login button */
+.btn-wrap {
+    position: relative; /* parent for absolute positioning */
+}
+
+.btn-wrap .social-github {
+    position: absolute;
+    left: 50%;
+    top: 100%; /* place the top of the icon directly at the button's bottom */
+    transform: translateX(-50%);
+    display: block;
+    z-index: 5;
+}
+
+.btn-wrap .social-github img {
+    width: 36px; /* appropriate size for under-button icon */
+    height: auto;
+    margin-top: 6px; /* small gap so icon doesn't touch button unless you want it to */
+}
+
+/* RESPONSIVE */
+@media (max-width: 780px) {
+    .container {
+        flex-direction: column;
+        max-width: 420px;
+    }
+
+    .form-section, .side-section {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .side-section {
+        border-top: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .outline {
+        border-color: white;
+        color: white;
+    }
+}

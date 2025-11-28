@@ -1,0 +1,1 @@
+console.log("LG/SG forms loaded successfully");
