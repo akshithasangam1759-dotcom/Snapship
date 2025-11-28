@@ -1,0 +1,112 @@
+/* ---- Website theme ---- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    transition: background 0.5s, color 0.5s;
+}
+
+body.light {
+    background: #e6edf8;
+    color: #222;
+}
+
+body.dark {
+    background: #0f1115;
+    color: #fff;
+}
+
+/* ---- Title ---- */
+.title {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 2.2rem;
+}
+
+/* ---- Toggle Button Container ---- */
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* ---- Toggle Button ---- */
+.toggle {
+    width: 200px;
+    height: 80px;
+    background: linear-gradient(#7cb5f7, #5b8fe0);
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.6s;
+}
+
+/* ---- Sun ---- */
+.sun {
+    width: 60px;
+    height: 60px;
+    background: #ffcf33;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: transform 0.6s;
+    z-index: 10;
+}
+
+/* ---- Moon ---- */
+.moon {
+    width: 60px;
+    height: 60px;
+    background: #dcdcdc;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: -80px;
+    box-shadow: inset -10px -10px 0 #bfbfbf;
+    transition: transform 0.6s;
+    z-index: 10;
+}
+
+/* ---- Clouds ---- */
+.clouds {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/9t3NUA7.png');
+    background-size: cover;
+    opacity: 0.9;
+    transition: opacity 0.6s;
+}
+
+/* ---- Stars ---- */
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/0CqQXK4.png');
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+/* ---- DARK MODE ANIMATION ---- */
+.toggle.dark {
+    background: linear-gradient(#0e1625, #1b2537);
+}
+
+.toggle.dark .sun {
+    transform: translateX(140px);
+}
+
+.toggle.dark .moon {
+    transform: translateX(-140px);
+}
+
+.toggle.dark .clouds {
+    opacity: 0;
+}
+
+.toggle.dark .stars {
+    opacity: 1;
+}
